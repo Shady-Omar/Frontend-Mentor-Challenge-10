@@ -1,0 +1,207 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+    height: 100%;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(images/bg-intro-desktop.png);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transform: translate(0px, 5%);
+}
+
+.container .text {
+    margin-left: 100px;
+    color: white;
+    width: 30%;
+}
+
+.container .text h2 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.container .text p {
+    font-size: 14px;
+    width: 120%;
+    line-height: 1.7;
+}
+
+.container .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+}
+
+.container .form .head {
+    border-radius: 5px;
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    text-align: center;
+    box-shadow: -2px 2px 7px 1px rgb(0 0 0 / 69%);
+    width: 85%;
+    margin-bottom: 20px;
+}
+
+.container .form .head p {
+    font-size: 13px;
+}
+
+.container .form .head p #bold {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.container .form .content{
+    width: 85%;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: -2px 2px 7px 1px rgb(0 0 0 / 69%);
+}
+
+.container .form .content form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .form .content input {
+    width: 80%;
+    padding: 15px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.container .form .content input:first-of-type {
+    margin-top: 20px;
+}
+
+::placeholder {
+    font-weight: 600;
+}
+
+.container .form .content button {
+    width: 80%;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-weight: 600;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: -2px 2px 7px 1px rgb(0 0 0 / 69%);
+    outline: none;
+    transition: 0.3s;
+}
+
+.container .form .content button:hover {
+    background-color: hsl(154deg 65% 68%);
+}
+
+.container .form .content .terms {
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.container .form .content .terms #terms {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* .attribution {
+    position: absolute;
+    bottom: 0px;
+    right: 40%;
+    font-weight: 600;
+} */
+
+.error_f, .error_l, .error_e, .error_p {
+    display: none;
+}
+
+.show {
+    color: hsl(0, 100%, 74%);
+    font-size: 12px;
+    transform: translate(-85px, -25px);
+    font-style: italic;
+    font-weight: 500;
+    display: list-item;
+    position: relative;
+}
+
+.show::before {
+    content: url("images/icon-error.svg");
+    position: absolute;
+    top: -2.2rem;
+    right: -10.6rem;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .text {
+        width: 100%;
+        margin-left: 0rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .container .text h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .container .text p {
+        font-size: 19px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .container .form {
+        width: 100%;
+    }
+
+    .container .form .head {
+        padding: 0.5rem 0rem;
+    }
+
+    .container .form .head p {
+        font-size: 14px;
+        text-align: center;
+        width: 50%;
+        transform: translate(50%, 0%);
+    }
+
+    .container .form .content {
+        margin-bottom: 4rem;
+    }
+
+    .show {
+        transform: translate(-30px, -25px);
+    }
+
+    .show::before {
+        right: -4rem;
+    }
+
+}
