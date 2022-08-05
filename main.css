@@ -9,6 +9,8 @@ body {
     background-image: url(images/bg-intro-desktop.png);
 }
 
+h1{font-size: 0; }
+
 .container {
     display: flex;
     flex-direction: row;
